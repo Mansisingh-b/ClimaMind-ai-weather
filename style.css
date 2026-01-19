@@ -1,70 +1,76 @@
 :root{
-  --day1:#4facfe;--day2:#00f2fe;
-  --night1:#0f2027;--night2:#203a43;
-  --glass:rgba(255,255,255,.25);
- }
- *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
- body{
-  height:100vh;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(120deg,var(--day1),var(--day2));
-  background-size:200% 200%;
-  animation:bgMove 8s ease infinite;
-  color:#fff;overflow:hidden
- }
- @keyframes bgMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
- }
- body.is-night{
-  background:linear-gradient(120deg,var(--night1),var(--night2));
- }
- .stars{
-  position:absolute;inset:0;opacity:0;transition:1s;
-  background:
-   radial-gradient(2px 2px at 20px 30px,#fff,transparent),
-   radial-gradient(2px 2px at 80px 90px,#fff,transparent),
-   radial-gradient(2px 2px at 150px 50px,#ddd,transparent);
-  background-size:200px 200px
- }
- body.is-night .stars{opacity:1}
- .celestial{
-  position:absolute;top:10%;right:10%;
-  width:80px;height:80px;border-radius:50%;
-  transition:1s
- }
- .sun{background:#ffcc33;box-shadow:0 0 60px #ffcc33}
- .moon{background:#eee;box-shadow:0 0 40px #fff;opacity:0;transform:translateY(120px)}
- body.is-night .sun{opacity:0;transform:translateY(-120px)}
- body.is-night .moon{opacity:1;transform:translateY(0)}
- .card{
-  width:330px;padding:30px;text-align:center;
-  background:var(--glass);
-  border-radius:22px;
-  backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,.3);
-  box-shadow:0 20px 50px rgba(0,0,0,.3);
-  animation:float 6s ease-in-out infinite
- }
- @keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-14px)}
- }
- input{
-  width:100%;padding:12px;border:none;border-radius:20px;
-  background:rgba(0,0,0,.25);color:#fff;
-  text-align:center;outline:none
- }
- h2{letter-spacing:1px;margin-top:15px}
- .pill{
-  display:inline-block;margin:6px 4px;padding:4px 12px;
-  border-radius:20px;background:rgba(255,255,255,.2);
-  font-size:.7rem
- }
- .temp{
-  font-size:5rem;font-weight:700;
-  text-shadow:0 0 30px rgba(255,255,255,.5)
- }
- .fade{animation:fade .6s ease}
- @keyframes fade{from{opacity:0;transform:scale(.95)}to{opacity:1}}
- 
+ --day1:#4facfe;--day2:#00f2fe;
+ --night1:#0f2027;--night2:#203a43;
+ --glass:rgba(255,255,255,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+ height:100vh;display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(120deg,var(--day1),var(--day2));
+ background-size:200% 200%;
+ animation:bgMove 8s ease infinite;
+ color:#fff;overflow:hidden
+}
+@keyframes bgMove{
+ 0%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+ 100%{background-position:0% 50%}
+}
+body.is-night{
+ background:linear-gradient(120deg,var(--night1),var(--night2));
+}
+
+.stars{
+ position:absolute;inset:0;opacity:0;transition:1s;
+ background:
+  radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+  radial-gradient(2px 2px at 80px 90px,#fff,transparent),
+  radial-gradient(2px 2px at 150px 50px,#ddd,transparent);
+ background-size:200px 200px
+}
+body.is-night .stars{opacity:1}
+
+.celestial{
+ position:absolute;top:10%;right:10%;
+ width:80px;height:80px;border-radius:50%;
+ transition:1s
+}
+.sun{background:#ffcc33;box-shadow:0 0 60px #ffcc33}
+.moon{background:#eee;box-shadow:0 0 40px #fff;opacity:0;transform:translateY(120px)}
+body.is-night .sun{opacity:0;transform:translateY(-120px)}
+body.is-night .moon{opacity:1;transform:translateY(0)}
+
+.card{
+ width:330px;padding:30px;text-align:center;
+ background:var(--glass);
+ border-radius:22px;
+ backdrop-filter:blur(15px);
+ border:1px solid rgba(255,255,255,.3);
+ box-shadow:0 20px 50px rgba(0,0,0,.3);
+ animation:float 6s ease-in-out infinite
+}
+@keyframes float{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-14px)}
+}
+
+input{
+ width:100%;padding:12px;border:none;border-radius:20px;
+ background:rgba(0,0,0,.25);color:#fff;
+ text-align:center;outline:none
+}
+
+h2{letter-spacing:1px;margin-top:15px}
+.pill{
+ display:inline-block;margin:6px 4px;padding:4px 12px;
+ border-radius:20px;background:rgba(255,255,255,.2);
+ font-size:.7rem
+}
+
+.temp{
+ font-size:5rem;font-weight:700;
+ text-shadow:0 0 30px rgba(255,255,255,.5)
+}
+.fade{animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:scale(.95)}to{opacity:1}}
