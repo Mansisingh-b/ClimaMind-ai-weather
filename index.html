@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Weather App</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="root">
+    <div class="stars"></div>
+    <div class="celestial sun"></div>
+    <div class="celestial moon"></div>
+
+    <div class="card" id="card">
+      <input id="city" placeholder="Enter City & press Enter">
+
+      <h2 id="place">Mumbai, IN</h2>
+
+      <div class="pill" id="dayStatus">Day</div>
+      <div class="pill" id="clock">--:--:--</div>
+      <div class="pill" id="date">-- -- ----</div>
+
+      <div class="temp" id="temp">--°</div>
+      <div id="desc">Waiting...</div>
+    </div>
+  </div>
+
+  <!-- Your JS -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
